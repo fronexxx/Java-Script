@@ -3,19 +3,19 @@ let books = [
         title: 'JavaScript',
         pages: 100,
         authors: ['name', 'surname'],
-        genre: 'Programming'
+        genre: ['Programming']
     },
     {
         title: 'JavaScript',
         pages: 455,
-        authors: 'name',
+        authors: ['name'],
         genre: ['Programming', 'Programming']
     },
     {
         title: 'pythonhuh',
         pages: 435,
         authors: ['name', 'surname', 'username'],
-        genre: 'Programming'
+        genre: ['Programming']
     },
     {
         title: 'pythonandjahndj',
@@ -63,3 +63,15 @@ for (let i = 0; i < books.length; i++) {
     }
 }
 console.log('Книги двох авторів', twoAuthorsBooks.length);
+
+// Книжки які писали два автори
+let oneAuthorBooks = [];
+index = 0;
+
+for (let i = 0; i < books.length; i++) {
+    if (books[i].authors.length === 1) {
+        oneAuthorBooks[index] = books[i];
+        index++;
+    }
+}
+console.log('Книги одного автора', oneAuthorBooks.length);
