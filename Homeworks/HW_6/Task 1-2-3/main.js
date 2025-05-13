@@ -14,12 +14,12 @@ console.log(' ');
 let a = 'hello world'
 let str1 = a.toUpperCase();
 console.log(str1);
-let b = 'lorem ipsum'
 
+let b = 'lorem ipsum'
 let str2 = b.toUpperCase();
 console.log(str2);
-let c = 'javascript is cool'
 
+let c = 'javascript is cool'
 let str3 = c.toUpperCase();
 console.log(str3);
 
