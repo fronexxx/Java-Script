@@ -1,29 +1,28 @@
 // Колода карт
 
-let cardSuite = [
-
-    {suit: 'spade', color: 'black'},
-    {suit: 'heart', color: 'red'},
-    {suit: 'diamond', color: 'red'},
-    {suit: 'club', color: 'black'}
-
-];
+let cardSuite = ['spades', 'hearts', 'diamonds', 'clubs'];
 let values = [6, 7, 8, 9, 10, 'ace', 'jack', 'queen', 'king'];
+let colors = {
+    spades: 'black',
+    hearts: 'red',
+    diamonds: 'red',
+    clubs: 'black'
+}
 let cards = [];
 
-for (const suits of cardSuite) {
+for (const suit of cardSuite) {
     for (const value of values) {
         cards.push({
-            suite: suits.suit,
             value: value,
-            color: suits.color
+            suite: suit,
+            color: colors[suit]
         });
     }
 }
 console.log(cards);
 
 // Знайти піковий туз
-let spadeAce = cards.find(card => card.suite === 'spade' && card.value === 'ace');
+let spadeAce = cards.find(card => card.suite === 'spades' && card.value === 'ace');
 console.log(spadeAce);
 
 // Всі шістки
@@ -35,9 +34,11 @@ let redCards = cards.filter(card => card.color === 'red');
 console.log(redCards);
 
 // всі бубни
-let diamonds = cards.filter(card => card.suite === 'diamond');
+let diamonds = cards.filter(card => card.suite === 'diamonds');
 console.log(diamonds);
 
 // Всі хрести більше 9
-let clubs = cards.filter(card => card.suite === 'club' &&  [9, 'jack', 'queen', 'king', 'ace'].includes(card.value));
+let clubs = cards.filter(card => card.suite === 'clubs' && [9, 10, 'ace', 'jack', 'queen', 'king'].includes(card.value));
 console.log(clubs);
+
+
