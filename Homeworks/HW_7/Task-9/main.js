@@ -1,7 +1,7 @@
 // Task-9
 Array.prototype.myForEach = function (callback) {
     for (let i = 0; i < this.length; i++) {
-        callback(this[i], i, this);
+        callback(this[i]);
     }
 }
 let users = [
@@ -23,7 +23,7 @@ users.myForEach(user => console.log(user));
 Array.prototype.myFilter = function (callback) {
     let result = [];
     for (let i = 0; i < this.length; i++) {
-        if (callback(this[i], i, this)) {
+        if (callback(this[i])) {
             result.push(this[i]);
         }
     }
