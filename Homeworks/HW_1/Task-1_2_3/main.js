@@ -1,4 +1,4 @@
-// Task-1
+// Task 1-2
 
 let s1 = 'hello';
 console.log(s1);

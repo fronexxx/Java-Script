@@ -1,4 +1,4 @@
-// Task-1
+// Task 1-2
 let square = (a, b) => (a * b);
 console.log(square(10, 5));
 

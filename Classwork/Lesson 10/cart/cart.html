@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .items img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="items"></div>
+<script>
+
+    let itemDiv = document.getElementsByClassName('items')[0];
+
+    let item = localStorage.getItem('cart');
+    let cartList = JSON.parse(item);
+
+    for (const cart of cartList) {
+        let productBlock = document.createElement('div');
+
+        let h2 = document.createElement('h2');
+        h2.innerText = `${cart.title} ${cart.price} UAH`
+
+        let img = document.createElement('img');
+        img.src = cart.image;
+
+        productBlock.append(h2, img);
+        itemDiv.appendChild(productBlock);
+    }
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-// Task-1
+// Task 1-2
 
 let s1 = 'hello world';
 let s2 = 'lorem ipsum';

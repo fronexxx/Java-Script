@@ -1,4 +1,4 @@
-// Task-1
+// Task 1-2
 function square(aNum, bNum) {
     return aNum * bNum;
 }

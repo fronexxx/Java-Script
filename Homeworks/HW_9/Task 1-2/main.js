@@ -1,5 +1,5 @@
-// Task-1
-document.write('Task-1')
+// Task 1-2
+document.write('Task 1-2')
 let div = document.createElement('div');
 
 div.classList.add('wrap');

@@ -1,6 +1,6 @@
-// Task-1
+// Task 1-2
 
-document.write('-----------------Task-1-----------------');
+document.write('-----------------Task 1-2-----------------');
 for (let i = 0; i < 10; i++) {
     document.write('<div> <h3>hello world</h3> </div>');
 

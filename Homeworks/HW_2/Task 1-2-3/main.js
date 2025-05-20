@@ -1,4 +1,4 @@
-// Task-1
+// Task 1-2
 
 let arr = [23, 'hello', true, null, NaN, undefined, {value: 1}, []]
 console.log(arr[0]);

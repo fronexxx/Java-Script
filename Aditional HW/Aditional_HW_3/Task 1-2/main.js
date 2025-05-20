@@ -1,4 +1,4 @@
-// Task-1
+// Task 1-2
 
 let arr = [5, 10, 15, 14, 32];
 console.log(arr);
