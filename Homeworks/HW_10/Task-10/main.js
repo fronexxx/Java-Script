@@ -6,18 +6,20 @@ const itemsDiv = document.getElementById('items');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 
-function render() {
-    itemsDiv.innerText = items;
+function render(pageCount) {
+    let start = pageCount * perPage;
+    let end = start + perPage;
+    itemsDiv.innerText = items.slice(start, end).join('\n');
 }
 
 prevBtn.addEventListener('click', () => {
     if (page > 0) page--;
-    render();
+    render(page);
 });
 
 nextBtn.addEventListener('click', () => {
     if ((page + 1) * perPage < items.length) page++;
-    render();
+    render(page);
 });
 
-render();
+render(page);
